@@ -115,3 +115,7 @@ UNION ALL
 SELECT * FROM `medicare_costs`.310_cardiac_2013_CA_FL_NY_TX
 UNION ALL
 SELECT * FROM `medicare_costs`.310_cardiac_2014_CA_FL_NY_TX;
+
+
+-- PULL ALL DATA FROM NEWLY CREATED TABLE-`medicare_costs`.310_cardiac_2011_2014_CA_FL_NY_TX
+SELECT * FROM `medicare_costs`.310_cardiac_2011_2014_CA_FL_NY_TX;
