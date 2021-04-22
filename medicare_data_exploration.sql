@@ -119,3 +119,9 @@ SELECT * FROM `medicare_costs`.310_cardiac_2014_CA_FL_NY_TX;
 
 -- PULL ALL DATA FROM NEWLY CREATED TABLE-`medicare_costs`.310_cardiac_2011_2014_CA_FL_NY_TX
 SELECT * FROM `medicare_costs`.310_cardiac_2011_2014_CA_FL_NY_TX;
+
+
+-- WINDOW FUNCTION OVER provider_zipcode, STATE, YEAR
+SELECT provider_zipcode, STATE, YEAR, AVG(AVERAGE_PAYMENTS_MEDICARE) 
+        OVER (ORDER BY provider_zipcode, STATE, YEAR) AS YEARLY_AVG_PAYMENTS 
+    FROM `medicare_costs`.310_cardiac_2011_2014_CA_FL_NY_TX;
